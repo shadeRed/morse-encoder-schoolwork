@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Morse_Encoder.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#F42069" Padding="24" CornerRadius="0">
+            <Label Text="Morse Encoder" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <StackLayout Margin="10,100,10,20">
+            <Entry x:Name="morse_encoded" Text="" Placeholder="encoded text..." IsReadOnly="True" FontFamily="monospace" TextTransform="Uppercase" />
+            <Entry x:Name="morse_active" Text="" IsReadOnly="True" FontFamily="monospace" FontSize="24" HorizontalTextAlignment="Center" />
+        </StackLayout>
+        <FlexLayout Margin="10,0,10,0" JustifyContent="SpaceEvenly">
+            <Button x:Name="morse_dot_btn" Text="." Clicked="morse_dot_btn_Clicked" />
+            <Button x:Name="morse_dash_btn" Text="-" Clicked="morse_dash_btn_Clicked" />
+            <Button x:Name="morse_gap_btn" Text="⎵" Clicked="morse_gap_btn_Clicked" />
+            <Button x:Name="morse_back_btn" Text="&lt;" Clicked="morse_back_btn_Clicked" />
+        </FlexLayout>
+    </StackLayout>
+</ContentPage>
